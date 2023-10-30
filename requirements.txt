@@ -105,15 +105,10 @@ pylint==2.5.0
 pynput==1.4.4
 pyparsing==2.4.2
 pyperclip==1.7.0
-pypiwin32==223
-PyQt5==5.12.3
-PyQt5-sip==12.7.2
-PyQtWebEngine==5.12.1
 pyrsistent==0.15.4
 python-dateutil==2.8.0
 python-jsonrpc-server==0.3.4
 python-language-server==0.31.10
-python-nmap==0.6.1
 PyYAML==5.1.2
 pyzmq==18.1.0
 requests==2.22.0
