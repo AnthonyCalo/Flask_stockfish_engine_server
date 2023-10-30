@@ -80,11 +80,6 @@ jupyterlab==1.1.4
 jupyterlab-server==1.0.6
 jupyterlab-widgets==3.0.2
 keyring==21.2.0
-Kivy==2.0.0
-kivy-deps.angle==0.3.0
-kivy-deps.glew==0.3.0
-kivy-deps.sdl2==0.3.1
-Kivy-Garden==0.1.4
 kiwisolver==1.1.0
 lazy-object-proxy==1.4.3
 lxml==4.4.1
