@@ -40,6 +40,4 @@ class getMove(Resource):
 
 
 if __name__ == "__main__":
-    global args
-    args = cmdArgParser().parse_args()
-    app.run(host="0.0.0.0", port=args.port,debug=args.debug)
+    app.run()
