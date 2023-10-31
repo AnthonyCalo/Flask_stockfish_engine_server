@@ -1,7 +1,7 @@
 import sys
 import json
 from flask import Flask, render_template, jsonify, request, send_from_directory
-from flask_cors import CORS
+from flask_cors import CORS, cross_origin
 from flask_restx import Api, Resource, fields, reqparse
 import os
 from argparse import ArgumentParser
@@ -27,6 +27,7 @@ def cmdArgParser():
     return parser
 
 @ns.route("/")
+@cross_origin()
 class getMove(Resource):
     def post(self):
         data = request.json
@@ -40,4 +41,4 @@ class getMove(Resource):
 
 
 if __name__ == "__main__":
-    app.run()
+    app.run(debug=True)
