@@ -32,10 +32,10 @@ class getMove(Resource):
         data = request.json
         print(data)
         #path to stockfish executable file
-        print(os.path.exists("./venv/Lib/site-packages/stockfish/stockfish_20011801_x64.exe"), "path exists")
-        os.system("chmod 777 ./venv/Lib/site-packages/stockfish/stockfish_20011801_x64.exe")
+        print(os.path.exists(".stockfish_20011801_x64.exe"), "path exists")
+        # os.system("chmod 777 ./venv/Lib/site-packages/stockfish/stockfish_20011801_x64.exe")
         print("executed chmod")
-        stockfish = Stockfish(path="./venv/Lib/site-packages/stockfish/stockfish_20011801_x64.exe")
+        stockfish = Stockfish(path="./stockfish_20011801_x64.exe")
         stockfish.set_position(data["moves"])
         bestmove = (stockfish.get_best_move())
         return jsonify(bestmove)
