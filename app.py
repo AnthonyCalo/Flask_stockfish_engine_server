@@ -27,7 +27,6 @@ def cmdArgParser():
     return parser
 
 @ns.route("/")
-@cross_origin()
 class getMove(Resource):
     def post(self):
         data = request.json
