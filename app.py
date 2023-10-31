@@ -30,8 +30,10 @@ def cmdArgParser():
 class getMove(Resource):
     def post(self):
         data = request.json
+        print(data)
         #path to stockfish executable file
-        stockfish = Stockfish(path=r"./venv/Lib/site-packages/stockfish/stockfish_20011801_x64.exe")
+        print(os.path.exists("./venv/Lib/site-packages/stockfish/stockfish_20011801_x64.exe"), "path exists")
+        stockfish = Stockfish(path="./venv/Lib/site-packages/stockfish/stockfish_20011801_x64.exe")
         stockfish.set_position(data["moves"])
         bestmove = (stockfish.get_best_move())
         return jsonify(bestmove)
